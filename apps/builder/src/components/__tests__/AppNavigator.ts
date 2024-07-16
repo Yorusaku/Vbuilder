@@ -1,11 +1,11 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
 
-import HelloWorld from '../HelloWorld.vue'
+import AppNavigator from '../AppNavigator.vue'
 
-describe('HelloWorld', () => {
+describe('AppNavigator', () => {
     it('renders properly', () => {
-        const wrapper = mount(HelloWorld, { props: { msg: 'Hello Vitest' } })
+        const wrapper = mount(AppNavigator, { props: { msg: 'Hello Vitest' } })
         expect(wrapper.text()).toContain('Hello Vitest')
     })
 })
