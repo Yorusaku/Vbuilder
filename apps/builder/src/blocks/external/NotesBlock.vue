@@ -3,10 +3,14 @@
     All rights reserved.
     让进取的人更具职业价值
 -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NotesEditor from '@/components/NotesEditor/NotesEditor.vue'
+</script>
 
 <template>
-    <div class="notes">notes block</div>
+    <div class="notes">
+        <NotesEditor />
+    </div>
 </template>
 
 <style scoped>
