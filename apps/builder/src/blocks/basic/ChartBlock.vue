@@ -4,6 +4,7 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import ChartRenderer from '@/components/ChartRenderer/ChartRenderer.vue'
 import type { ChartBlockInfo } from '@/types/block'
 
 defineProps<{
@@ -12,7 +13,9 @@ defineProps<{
 </script>
 
 <template>
-    <div class="chart">charts block</div>
+    <div class="chart">
+        <ChartRenderer :blockInfo="blockInfo" />
+    </div>
 </template>
 
 <style scoped>

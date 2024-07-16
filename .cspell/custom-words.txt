@@ -11,6 +11,7 @@ capi
 ccwa
 chtm
 cldc
+curveness
 dbte
 demi
 dica
@@ -35,6 +36,7 @@ maemo
 meego
 miaoma
 midp
+miserables
 mmef
 mwbp
 mywa
@@ -53,6 +55,7 @@ Tiptap
 treo
 utst
 vbuilder
+veri
 viewports
 Vite
 voda
@@ -63,4 +66,4 @@ wmlb
 wonu
 xiino
 zeto
-veri
+zrender
