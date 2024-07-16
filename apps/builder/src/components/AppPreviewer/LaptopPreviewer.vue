@@ -4,6 +4,8 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
+
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
 import type { PreviewType } from './type'
 const props = defineProps<{
@@ -19,7 +21,7 @@ function greet(mode: PreviewType) {
 </script>
 
 <template>
-    <div class="layout-runner" style="--container-bg-color: #3D6583">
+    <div class="layout-runner" style="--container-bg-color: #3d6583">
         <div class="layout-runner-navigator">
             <div></div>
             <div class="address-wrapper">https://miaomaedu.com/path/to/yoursite</div>
@@ -29,9 +31,11 @@ function greet(mode: PreviewType) {
         <div class="layout-runner-content-wrapper tiny-scrollbar">
             <div class="layout-runner-content-header">
                 <div class="layout-runner-content-navigator"></div>
-                <div class="layout-runner-content-title">MiaoMa Vbuilder</div>
+                <div class="layout-runner-content-title">MiaoMa vBuilder</div>
             </div>
-            <div class="layout-runner-content"></div>
+            <div class="layout-runner-content">
+                <BlocksRenderer />
+            </div>
         </div>
     </div>
 </template>
