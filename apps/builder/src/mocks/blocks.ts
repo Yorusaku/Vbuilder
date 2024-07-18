@@ -11,7 +11,8 @@ export const blocks: BlockInfo[] = [
         type: 'heroTitle',
         label: '标题',
         props: {
-            content: '标题'
+            align: 'left',
+            content: '妙码学院——让进取的人更具职业价值'
         }
     },
     {
@@ -19,8 +20,8 @@ export const blocks: BlockInfo[] = [
         type: 'quote',
         label: 'Quote',
         props: {
-            content: 'Quote Content',
-            status: 'error'
+            content: '知行合一',
+            status: 'success'
         }
     },
     {
@@ -36,7 +37,7 @@ export const blocks: BlockInfo[] = [
         type: 'image',
         label: 'Image',
         props: {
-            url: 'https://images.pexels.com/photos/17108884/pexels-photo-17108884.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load'
+            url: 'https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/static/media/logo_with_name.598fc011.svg'
         }
     },
     {
