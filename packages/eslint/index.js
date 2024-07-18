@@ -3,6 +3,4 @@
  *   All rights reserved.
  *   让进取的人更具职业价值
  */
-import eslintConfigMiaoma from 'eslint-config-miaoma'
-
-export default [...eslintConfigMiaoma]
+export { default } from './eslint.config.js'
