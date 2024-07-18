@@ -4,33 +4,33 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
-import { Plus } from '@icon-park/vue-next'
+// import { Plus } from '@icon-park/vue-next'
 
-import ActionList from './ActionList.vue'
+import DataSourceList from './DataSourceList.vue'
 </script>
 
 <template>
-    <div class="actions-left-panel-wrapper">
+    <div class="data-source-left-panel-wrapper">
         <div class="drawer-header">
-            <h3 class="drawer-title">ACTIONS</h3>
-            <button class="drawer-component-adder">
+            <h3 class="drawer-title">SHEETS</h3>
+            <!-- <button class="drawer-component-adder">
                 <Plus size="18" />
-            </button>
+            </button> -->
         </div>
         <div class="drawer-content">
-            <ActionList />
+            <DataSourceList />
         </div>
     </div>
 </template>
 
 <style scoped>
-.actions-left-panel-wrapper {
+.data-source-left-panel-wrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
     z-index: 4;
-    width: 320px;
+    width: 300px;
     height: 100%;
     border-right: 1px solid var(--color-gray-200);
 }

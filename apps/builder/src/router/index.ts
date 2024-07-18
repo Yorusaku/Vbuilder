@@ -18,7 +18,18 @@ const router = createRouter({
                 {
                     path: 'dataSource',
                     name: 'dataSource',
-                    component: () => import('../views/DataSourceView.vue')
+                    component: () => import('../views/DataSourceView.vue'),
+                    children: [
+                        {
+                            path: '',
+                            redirect: '/app/dataSource/1'
+                        },
+                        {
+                            path: ':id',
+                            name: 'dataSourceDetail',
+                            component: () => import('../views/DataSourceDetailView.vue')
+                        }
+                    ]
                 },
                 {
                     path: 'layout',
