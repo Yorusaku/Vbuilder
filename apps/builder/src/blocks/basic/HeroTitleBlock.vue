@@ -11,6 +11,7 @@
 
 <style scoped>
 .hero-title {
+    width: 100%;
     font-size: 2rem;
     font-weight: 700;
     margin: 0;

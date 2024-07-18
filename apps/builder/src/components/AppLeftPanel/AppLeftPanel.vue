@@ -57,7 +57,7 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
 }
 
 .app-left-panel-drawer {
-    width: var(--panel-width);
+    width: 320px;
     height: 100%;
     overflow: hidden;
 }

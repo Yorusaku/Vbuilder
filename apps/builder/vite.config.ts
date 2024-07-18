@@ -19,6 +19,7 @@ export default defineConfig({
         }
     },
     server: {
+        port: 3000,
         proxy: {
             '/charts': {
                 target: 'https://echarts.apache.org',

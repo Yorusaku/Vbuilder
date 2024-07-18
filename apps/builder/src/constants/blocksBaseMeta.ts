@@ -18,7 +18,13 @@ import { nanoid } from 'nanoid'
 
 import type { BlockInfo, BlockType } from '@/types/block'
 
-export const blocksBaseMetaList: { type: BlockType; label: string; icon: Icon }[] = [
+type BlockBaseMeta = {
+    type: BlockType
+    label: string
+    icon: Icon
+}
+
+export const blocksBaseMetaList: BlockBaseMeta[] = [
     {
         type: 'quote',
         label: 'Quote',
@@ -81,9 +87,9 @@ export const getBlocksDefaultData = (type: BlockType): BlockInfo => {
                 label: 'Notes',
                 props: {
                     content: `
-          <p>I’m <em>running</em> Tiptap <s>with</s> Vue.js. 🎉</p>
-          <p><strong>You</strong> can also teach the editor new things. For example to recognize hex colors and add a color</p>
-          <p> swatch on the fly: #FFF, #0D0D0D, #616161, #A975FF, #FB5151, #FD9170, #FFCB6B, #68CEF8, #80cbc4, #9DEF8F </p>
+            <p>I’m <em>running</em> Tiptap <s>with</s> Vue.js. 🎉</p>
+            <p><strong>You</strong> can also teach the editor new things. For example to recognize hex colors and add a color</p>
+            <p> swatch on the fly: #FFF, #0D0D0D, #616161, #A975FF, #FB5151, #FD9170, #FFCB6B, #68CEF8, #80cbc4, #9DEF8F </p>
         `
                 }
             }

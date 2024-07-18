@@ -4,7 +4,7 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
-import { ApplicationMenu, DataSheet, Lightning, Page, Share } from '@icon-park/vue-next'
+import { ApplicationMenu, DataSheet, FriendsCircle, Lightning, Page } from '@icon-park/vue-next'
 import { computed, defineComponent, h } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -115,7 +115,7 @@ const Icon = defineComponent({
         </div>
         <div class="app-setting-wrapper">
             <div class="common-btn">
-                <Share />
+                <FriendsCircle size="16" />
                 发布
             </div>
         </div>
@@ -159,7 +159,7 @@ const Icon = defineComponent({
     height: 32px;
     margin: 10px 8px 10px 8px;
     border-radius: 8px;
-    background-color: #3D6583;
+    background-color: #3d6583;
 }
 
 .app-logo img {
