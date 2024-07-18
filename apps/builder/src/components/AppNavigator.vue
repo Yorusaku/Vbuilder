@@ -40,6 +40,11 @@ const route = useRoute()
 
 const activeLink = computed(() => route.name)
 
+const checkActive = (value: string) => {
+    const activeLinkValue = activeLink.value as string
+    return activeLinkValue.includes(value)
+}
+
 // 等价于 computed
 // const activeLink = ref(route.path.slice(1))
 // watch(
@@ -93,23 +98,23 @@ const Icon = defineComponent({
                 class="app-navigator-link-item"
                 v-for="item in linkItems"
                 :key="item.value"
-                :style="activeLink === item.value && { background: item.bg }"
+                :style="checkActive(item.value) && { background: item.bg }"
                 :to="`/app/${item.value}`"
             >
                 <div
                     :style="{
                         lineHeight: 0.7,
-                        color: activeLink === item.value ? item.color : 'var(--color-gray-700)'
+                        color: checkActive(item.value) ? item.color : 'var(--color-gray-700)'
                     }"
                 >
-                    <Icon :type="item.value" :active="activeLink === item.value" />
+                    <Icon :type="item.value" :active="checkActive(item.value)" />
                 </div>
                 <span class="item-title">
                     {{ item.label }}
                 </span>
                 <div
                     class="item-border"
-                    :style="activeLink === item.value ? { background: item.borderColor } : {}"
+                    :style="checkActive(item.value) ? { background: item.borderColor } : {}"
                 ></div>
             </RouterLink>
         </div>

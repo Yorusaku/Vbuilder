@@ -3,6 +3,22 @@
     All rights reserved.
     让进取的人更具职业价值
 -->
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterView } from 'vue-router'
 
-<template>actions</template>
+import ActionsLeftPanel from '@/components/ActionsLeftPanel/ActionsLeftPanel.vue'
+</script>
+
+<template>
+    <div class="actions-wrapper">
+        <ActionsLeftPanel />
+        <RouterView />
+    </div>
+</template>
+
+<style scoped>
+.actions-wrapper {
+    display: flex;
+    height: 100%;
+}
+</style>

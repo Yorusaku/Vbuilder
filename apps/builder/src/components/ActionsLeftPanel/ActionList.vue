@@ -4,44 +4,48 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
-import { WebPage } from '@icon-park/vue-next'
+import { Lightning } from '@icon-park/vue-next'
 import { ref } from 'vue'
+import { RouterLink, useRoute } from 'vue-router'
 
-const pages = [
+const actionList = ref([
     {
-        type: 'page',
-        label: '首页'
+        id: '1',
+        type: 'math',
+        title: 'Math'
     },
     {
-        type: 'page',
-        label: 'New Screen'
-    },
-    {
-        type: 'page',
-        label: 'Some Things'
+        id: '2',
+        type: 'math',
+        title: 'This is a long title'
     }
-]
+])
 
-const activatedPageIndex = ref(0)
+const route = useRoute()
 </script>
 
 <template>
-    <ul class="navigation-list">
-        <li
-            :class="['navigation-item', activatedPageIndex === index && 'active']"
-            v-for="(page, index) in pages"
-            :key="page.type"
+    <ul class="action-list">
+        <RouterLink
+            is="li"
+            :to="`/app/actions/${action.id}`"
+            :class="['action-item', { active: route.params.id === action.id }]"
+            v-for="action in actionList"
+            :key="action.id"
         >
-            <WebPage class="navigation-item-icon" />
-            <span class="navigation-item-name">
-                {{ page.label }}
+            <Lightning />
+            <span class="action-item-title">
+                {{ action.title }}
             </span>
-        </li>
+            <span class="action-item-type">
+                {{ action.type }}
+            </span>
+        </RouterLink>
     </ul>
 </template>
 
 <style scoped>
-.navigation-item {
+.action-item {
     display: flex;
     align-items: center;
     padding: 6px 10px;
@@ -61,17 +65,17 @@ const activatedPageIndex = ref(0)
     }
 }
 
-.navigation-item-icon {
+.action-item-icon {
     color: var(--color-gray-800);
 }
 
-.navigation-item-name {
+.action-item-title {
     margin-left: 8px;
     font-size: var(--font-size-normal);
     color: var(--color-gray-900);
 }
 
-.navigation-item-title {
+.action-item-type {
     flex: 1;
     margin-left: 8px;
     font-size: var(--font-size-small);

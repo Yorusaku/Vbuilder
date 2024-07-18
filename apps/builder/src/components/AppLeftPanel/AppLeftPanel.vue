@@ -17,7 +17,7 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
 <template>
     <div class="app-left-panel-wrapper">
         <div class="app-left-panel-drawer">
-            <div class="app-left-panel-split">
+            <div class="app-left-panel-split tiny-scrollbar">
                 <div class="drawer-header">
                     <h3 class="drawer-title">NAVIGATION</h3>
                 </div>
@@ -25,7 +25,7 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
                     <Navigation />
                 </div>
             </div>
-            <div class="app-left-panel-split">
+            <div class="app-left-panel-split tiny-scrollbar">
                 <div class="drawer-header">
                     <h3 class="drawer-title">COMPONENTS</h3>
                     <button
@@ -68,24 +68,7 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
     border-bottom: 1px solid var(--color-gray-200);
     border-right: 1px solid var(--color-gray-200);
 
-    &::-webkit-scrollbar {
-        width: 10px;
-    }
 
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-gray-300) transparent;
-    scroll-behavior: smooth;
-
-    &::-webkit-scrollbar-thumb {
-        border: 2px solid transparent;
-        box-shadow: 0px 0px 10px 10px inset;
-        border-radius: 100px;
-        margin: 2px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
 }
 
 .blocks-drawer-wrapper {
@@ -98,8 +81,9 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
     justify-content: space-between;
     align-items: center;
     top: 0;
+    height: 52px;
+    padding: 0 10px 0 20px;
     font-weight: var(--font-weight-bolder);
-    padding: 12px 16px 12px 20px;
     background-color: var(--color-white);
 }
 
