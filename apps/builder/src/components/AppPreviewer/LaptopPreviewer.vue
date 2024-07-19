@@ -5,88 +5,30 @@
 -->
 <script setup lang="ts">
 import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
-
-import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
-import type { PreviewType } from './type'
-const props = defineProps<{
-    previewMode?: PreviewType
-}>()
-const emit = defineEmits<{
-    'preview-mode-change': [mode: PreviewType]
-}>()
-
-function greet(mode: PreviewType) {
-    emit('preview-mode-change', mode)
-}
 </script>
 
 <template>
-    <div class="layout-runner" style="--container-bg-color: #3d6583">
-        <div class="layout-runner-navigator">
-            <div></div>
-            <div class="address-wrapper">https://miaomaedu.com/path/to/yoursite</div>
-
-            <PreviewModeSwitcher :preview-mode="props.previewMode" @preview-mode-change="greet" />
+    <div class="layout-runner-content-wrapper tiny-scrollbar" style="--container-bg-color: #3d6583">
+        <div class="layout-runner-content-header">
+            <div class="layout-runner-content-navigator">
+                <div class="layout-runner-content-navigator-info">
+                    <div class="app-logo">
+                        <img
+                            src="https://functions.prod.internal.glideapps.com/getEmoji/%E2%98%84%EF%B8%8F"
+                        />
+                    </div>
+                    <h1 class="app-name">MiaoMa vBuilder</h1>
+                </div>
+            </div>
+            <!-- <div class="layout-runner-content-title">MiaoMa vBuilder</div> -->
         </div>
-        <div class="layout-runner-content-wrapper tiny-scrollbar">
-            <div class="layout-runner-content-header">
-                <div class="layout-runner-content-navigator"></div>
-                <div class="layout-runner-content-title">MiaoMa vBuilder</div>
-            </div>
-            <div class="layout-runner-content">
-                <BlocksRenderer />
-            </div>
+        <div class="layout-runner-content">
+            <BlocksRenderer />
         </div>
     </div>
 </template>
 
 <style scoped>
-.layout-runner {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    height: 98%;
-    overflow: hidden;
-    margin: 8px 3%;
-    background-color: var(--color-white);
-    border-radius: 8px;
-    box-shadow:
-        0 0 1px rgb(62 65 86 / 37.5%),
-        0 12px 24px rgb(62 65 86 / 15%),
-        0 20px 40px rgb(62 65 86 / 10%);
-}
-
-.layout-runner-navigator {
-    height: 42px;
-    flex-shrink: 0;
-    display: grid;
-    font-size: var(--font-size-normal);
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    align-items: center;
-    gap: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    padding: 0 16px;
-    border-bottom: 1px solid var(--color-gray-200);
-    background-color: var(--color-gray-100);
-}
-
-.address-wrapper {
-    grid-column: span 2 / span 2;
-    border-radius: 8px;
-    background-color: var(--color-gray-300);
-    color: var(--color-gray-800);
-    padding: 3px 32px 3px 12px;
-    cursor: pointer;
-    overflow: hidden;
-    text-align: center;
-    text-overflow: ellipsis;
-
-    &:hover {
-        background-color: var(--color-gray-400);
-    }
-}
-
 .layout-runner-content-wrapper {
     display: flex;
     flex-direction: column;
@@ -101,12 +43,31 @@ function greet(mode: PreviewType) {
 }
 
 .layout-runner-content-navigator {
+    display: flex;
     height: 56px;
     font-size: var(--font-size-normal);
     align-items: center;
-    padding: 0 16px;
+    padding: 0 90px;
     background-color: var(--container-bg-color);
-    border-bottom: 1px solid rgb(31 41 55 / 8%);
+}
+
+.layout-runner-content-navigator-info {
+    display: flex;
+    align-items: center;
+}
+
+.app-logo img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.app-name {
+    font-size: 16px;
+    font-weight: var(--font-weight-bolder);
+    color: var(--color-white);
+    margin-left: 8px;
 }
 
 .layout-runner-content-title {
@@ -114,7 +75,7 @@ function greet(mode: PreviewType) {
     align-items: center;
     padding: 0 90px;
     height: 56px;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: var(--font-weight-bolder);
     color: var(--color-white);
     background-color: var(--container-bg-color);

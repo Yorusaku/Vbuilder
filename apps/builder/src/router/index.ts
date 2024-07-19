@@ -55,6 +55,11 @@ const router = createRouter({
             ]
         },
         {
+            path: '/runner',
+            name: 'runner',
+            component: () => import('../views/RunnerView.vue')
+        },
+        {
             path: '/',
             redirect: '/app/layout'
         }

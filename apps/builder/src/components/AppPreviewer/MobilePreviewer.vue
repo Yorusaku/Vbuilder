@@ -6,37 +6,17 @@
 <script setup lang="ts">
 import BlocksRenderer from '@/blocks/BlocksRenderer.vue'
 
-import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
-import StatusBar from './StatusBar.vue'
-import type { PreviewType } from './type'
-
-const props = defineProps<{
-    previewMode?: PreviewType
-}>()
-const emit = defineEmits<{
-    'preview-mode-change': [mode: PreviewType]
-}>()
-
-function greet(mode: PreviewType) {
-    emit('preview-mode-change', mode)
-}
+// import StatusBar from '../AppEditorRenderer/StatusBar.vue'
 </script>
 
 <template>
-    <div class="layout-runner" style="--container-bg-color: #3d6583">
-        <div class="layout-runner-navigator">
-            <PreviewModeSwitcher :preview-mode="props.previewMode" @preview-mode-change="greet" />
+    <div class="content" style="--container-bg-color: #3d6583">
+        <div class="navigator-wrapper">
+            <div class="navigator">MiaoMa vBuilder</div>
         </div>
-        <div class="simulator-wrapper">
-            <div class="simulator-header">
-                <StatusBar />
-                <div class="simulator-navigator-wrapper">
-                    <div class="simulator-navigator">MiaoMa vBuilder</div>
-                </div>
-            </div>
-            <div class="simulator">
-                <BlocksRenderer />
-            </div>
+
+        <div class="render-content">
+            <BlocksRenderer />
         </div>
     </div>
 </template>
@@ -58,40 +38,24 @@ function greet(mode: PreviewType) {
     width: 100%;
 }
 
-.simulator-wrapper {
+.content {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 393px;
-    height: 852px;
-    margin: 0 auto;
-    border-radius: 55px;
-    overflow: hidden;
-    overflow-y: auto;
     background-color: var(--color-white);
-    box-shadow:
-        0 0 0 5px #151515,
-        0 0 0 6px var(--container-bg-color),
-        0 -7.5px 1.5px rgb(255 255 255 / 40%),
-        7.5px 0 1.5px rgb(255 255 255 / 25%),
-        -7.5px 0 1.5px rgb(255 255 255 / 40%),
-        0 7.5px 1.5px rgb(255 255 255 / 25%),
-        0 0 0 9px var(--container-bg-color),
-        6px 8px 16px rgb(0 0 0 / 25%),
-        20px 32px 72px rgb(0 0 0 / 20%);
 }
 
-.simulator-wrapper::-webkit-scrollbar {
+.wrapper::-webkit-scrollbar {
     display: none;
 }
 
-.simulator-header {
+.navigator-wrapper {
     position: sticky;
     top: 0;
     z-index: 2;
 }
 
-.simulator-navigator {
+.navigator {
     display: flex;
     height: 56px;
     align-items: center;
@@ -103,12 +67,12 @@ function greet(mode: PreviewType) {
     border-bottom: 1px solid rgb(31 41 55 / 8%);
 }
 
-.simulator-title {
+.title {
     height: 90px;
     background-color: var(--container-bg-color);
 }
 
-.simulator {
+.render-content {
     display: flex;
     flex-direction: column;
     align-items: center;
