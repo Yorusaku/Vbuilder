@@ -39,7 +39,7 @@ function toggle() {
     <div class="layout-runner" ref="runner" style="--container-bg-color: #3d6583">
         <div class="layout-runner-navigator">
             <div></div>
-            <div class="address-wrapper">https://helloword.com/sdfsfsdf/sggwefwfsdfsdfsdfsdfsf</div>
+            <div class="address-wrapper">https://miaomaedu.com/path/to/yoursite</div>
 
             <PreviewModeSwitcher
                 :preview-mode="props.previewMode"
@@ -57,7 +57,7 @@ function toggle() {
     flex-direction: column;
     flex: 1;
     overflow: hidden;
-    margin: 8px 40px;
+    margin: 8px 3%;
     background-color: var(--color-white);
     border-radius: 8px;
     box-shadow:
@@ -84,12 +84,17 @@ function toggle() {
 .address-wrapper {
     grid-column: span 2 / span 2;
     border-radius: 6px;
-    background-color: var(--color-gray-200);
+    background-color: var(--color-gray-300);
     color: var(--color-gray-800);
     padding: 2px 32px 2px 12px;
     cursor: pointer;
     overflow: hidden;
+    text-align: center;
     text-overflow: ellipsis;
+
+    &:hover {
+        background-color: var(--color-gray-400);
+    }
 }
 
 .layout-runner-content-wrapper {
