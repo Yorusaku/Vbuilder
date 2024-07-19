@@ -11,17 +11,19 @@
 import { onMounted, ref } from 'vue'
 import * as zrender from 'zrender'
 
-var containerRef = ref<HTMLDivElement | null>(null)
+const containerRef = ref<HTMLDivElement | null>(null)
+
+const text = '妙码学院'
 
 onMounted(() => {
-    var zr = zrender.init(containerRef.value, { renderer: 'svg' })
+    const zr = zrender.init(containerRef.value, { renderer: 'svg' })
 
-    var w = zr.getWidth() ?? 0
-    var h = zr.getHeight() ?? 0
+    const w = zr.getWidth() ?? 0
+    const h = zr.getHeight() ?? 0
 
-    var t1 = new zrender.Text({
+    const t1 = new zrender.Text({
         style: {
-            text: 'zrender',
+            text,
             align: 'center',
             verticalAlign: 'middle',
             fill: '#0ff',
@@ -35,10 +37,10 @@ onMounted(() => {
     })
     zr.add(t1)
 
-    var t2 = new zrender.Text({
+    const t2 = new zrender.Text({
         culling: true,
         style: {
-            text: 'zrender',
+            text,
             fontSize: 200,
             align: 'center',
             fill: '#fff',
@@ -51,9 +53,9 @@ onMounted(() => {
     })
     zr.add(t2)
 
-    var lines: zrender.Rect[] = []
-    for (var i = 0; i < 16; ++i) {
-        var line = new zrender.Rect({
+    const lines: zrender.Rect[] = []
+    for (let i = 0; i < 16; ++i) {
+        const line = new zrender.Rect({
             shape: {
                 x: w * (Math.random() - 0.3),
                 y: h * Math.random(),
@@ -77,7 +79,7 @@ onMounted(() => {
                 y: h / 2
             })
 
-            for (var i = 0; i < lines.length; ++i) {
+            for (let i = 0; i < lines.length; ++i) {
                 lines[i].attr('shape', {
                     x: w * Math.random(),
                     y: h * Math.random(),
@@ -95,7 +97,7 @@ onMounted(() => {
                     y: h / 2
                 })
 
-                for (var i = 0; i < lines.length; ++i) {
+                for (let i = 0; i < lines.length; ++i) {
                     lines[i].attr('style', {
                         opacity: 0
                     })

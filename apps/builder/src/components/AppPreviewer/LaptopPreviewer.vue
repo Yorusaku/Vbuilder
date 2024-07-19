@@ -47,7 +47,7 @@ function greet(mode: PreviewType) {
     flex: 1;
     height: 98%;
     overflow: hidden;
-    margin: 8px 40px;
+    margin: 8px 3%;
     background-color: var(--color-white);
     border-radius: 8px;
     box-shadow:

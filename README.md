@@ -1,40 +1,9 @@
-# miaoma-vuse
+🔥 @miaoma/vbuilder
 
-[![NPM version](https://img.shields.io/npm/v/miao-ui.svg?style=flat)](https://npmjs.org/package/miao-ui)
-[![NPM downloads](http://img.shields.io/npm/dm/miao-ui.svg?style=flat)](https://npmjs.org/package/miao-ui)
+基于 Vue3 + Typescript，可视化低代码平台实战项目，项目采用 monorepo 架构
 
-A react library developed with dumi
+妙码学院官方出品，作者 @Heyi
 
-## Usage
+项目供学员学习使用，可用作练习，可用作美化简历，不可直接开源。
 
-TODO
-
-## Options
-
-TODO
-
-## Development
-
-```bash
-# install dependencies
-$ pnpm install
-
-# develop library by docs demo
-$ pnpm start
-
-# build library source code
-$ pnpm run build
-
-# build library source code in watch mode
-$ pnpm run build:watch
-
-# build docs
-$ pnpm run docs:build
-
-# check your project for potential problems
-$ pnpm run doctor
-```
-
-## LICENSE
-
-MIT
+妙码学院官方网站：http://www.miaomaedu.com

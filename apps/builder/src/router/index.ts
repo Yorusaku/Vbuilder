@@ -16,6 +16,10 @@ const router = createRouter({
             component: AppView,
             children: [
                 {
+                    path: '',
+                    redirect: '/app/layout'
+                },
+                {
                     path: 'dataSource',
                     name: 'dataSource',
                     component: () => import('../views/DataSourceView.vue'),
@@ -49,6 +53,10 @@ const router = createRouter({
                     ]
                 }
             ]
+        },
+        {
+            path: '/',
+            redirect: '/app/layout'
         }
     ]
 })
