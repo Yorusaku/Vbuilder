@@ -14,7 +14,8 @@
         "spellcheck": "cspell lint --dot --gitignore --color --cache --show-suggestions \"(packages|apps)/**/*.@(html|js|cjs|mjs|ts|tsx|css|scss|md|vue)\"",
         "typecheck": "pnpm --filter builder typecheck ",
         "commit": "git-cz",
-        "prepare": "husky"
+        "prepare": "husky",
+        "clean": "rimraf \"{apps,packages}/**/{node_modules,docs,lib,dist,stats.html}\" node_modules pnpm-lock.yaml .eslintcache .cspellcache docs dist"
     },
     "keywords": [],
     "author": "Heyi",
@@ -56,6 +57,7 @@
         "lint-staged": "15.2.7",
         "prettier": "3.3.3",
         "cz-git": "1.9.3",
-        "commitizen": "4.3.0"
+        "commitizen": "4.3.0",
+        "rimraf": "6.0.1"
     }
 }

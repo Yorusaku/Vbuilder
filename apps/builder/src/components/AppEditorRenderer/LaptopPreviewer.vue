@@ -58,6 +58,7 @@ function toggle() {
     flex: 1;
     overflow: hidden;
     margin: 8px 3%;
+    height: 100%;
     background-color: var(--color-white);
     border-radius: 8px;
     box-shadow:
