@@ -2,12 +2,15 @@
     "name": "miaoma-vbuilder",
     "version": "1.0.0",
     "description": "",
+    "packageManager": "pnpm@9.5.0",
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "dev": "pnpm dev:builder & pnpm dev:runner",
+        "dev": "turbo run dev",
+        "build": "turbo run build",
         "dev:builder": "pnpm --filter builder dev",
         "dev:runner": "pnpm --filter runner dev",
+        "preview": "turbo run preview",
         "lint:vue": "eslint --fix",
         "lint:style": "stylelint \"{packages,apps}/**/*.{css,scss,vue}\"",
         "lint": "pnpm lint:ts && pnpm lint:style",
@@ -58,6 +61,7 @@
         "prettier": "3.3.3",
         "cz-git": "1.9.3",
         "commitizen": "4.3.0",
-        "rimraf": "6.0.1"
+        "rimraf": "6.0.1",
+        "turbo": "2.0.9"
     }
 }
