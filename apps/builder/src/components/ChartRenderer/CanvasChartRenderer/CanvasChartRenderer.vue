@@ -37,6 +37,21 @@ onMounted(() => {
     })
     zr.add(t1)
 
+    const heyi = new zrender.Arc({
+        shape: {
+            cx: w / 2,
+            cy: h / 2,
+            r: 100,
+            startAngle: 0,
+            endAngle: Math.PI * 1
+        },
+        style: {
+            fill: '#f0f',
+            blend: 'lighten'
+        }
+    })
+    zr.add(heyi)
+
     const t2 = new zrender.Text({
         culling: true,
         style: {

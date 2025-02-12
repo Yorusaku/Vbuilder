@@ -5,6 +5,12 @@
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
+// import ActionDetailView from '../views/ActionDetailView.vue'
+// import ActionsView from '../views/ActionsView.vue'
+// import DataSourceDetailView from '../views/DataSourceDetailView.vue'
+// import DataSourceView from '../views/DataSourceView.vue'
+// import PageLayoutView from '../views/PageLayoutView.vue'
+// import RunnerView from '../views/RunnerView.vue'
 import AppView from '../views/AppView.vue'
 
 const router = createRouter({
@@ -23,6 +29,7 @@ const router = createRouter({
                     path: 'dataSource',
                     name: 'dataSource',
                     component: () => import('../views/DataSourceView.vue'),
+                    // component: DataSourceView,
                     children: [
                         {
                             path: '',
@@ -32,6 +39,7 @@ const router = createRouter({
                             path: ':id',
                             name: 'dataSourceDetail',
                             component: () => import('../views/DataSourceDetailView.vue')
+                            // component: DataSourceDetailView
                         }
                     ]
                 },
@@ -39,16 +47,19 @@ const router = createRouter({
                     path: 'layout',
                     name: 'layout',
                     component: () => import('../views/PageLayoutView.vue')
+                    // component: PageLayoutView
                 },
                 {
                     path: 'actions',
                     name: 'actions',
                     component: () => import('../views/ActionsView.vue'),
+                    // component: ActionsView,
                     children: [
                         {
                             path: ':id',
                             name: 'actionsDetail',
                             component: () => import('../views/ActionDetailView.vue')
+                            // component: ActionDetailView
                         }
                     ]
                 }
@@ -58,6 +69,7 @@ const router = createRouter({
             path: '/runner',
             name: 'runner',
             component: () => import('../views/RunnerView.vue')
+            // component: RunnerView
         },
         {
             path: '/',

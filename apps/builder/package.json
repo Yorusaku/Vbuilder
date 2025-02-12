@@ -50,7 +50,10 @@
         "typescript": "5.5.3",
         "vite": "5.3.3",
         "vite-plugin-vue-devtools": "7.3.6",
+        "rollup-plugin-visualizer": "5.12.0",
         "vitest": "2.0.3",
-        "vue-tsc": "2.0.26"
+        "vue-tsc": "2.0.26",
+        "@sentry/vue": "8.26.0",
+        "@sentry/vite-plugin": "2.22.2"
     }
 }

@@ -4,7 +4,12 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
+
+onMounted(() => {
+    myUndefinedFunction()
+})
 </script>
 
 <template>

@@ -54,7 +54,7 @@ onMounted(() => {
             .data(root.features)
             .enter()
             .append('path')
-            .attr('stroke', '#000')
+            .attr('stroke', '#E3E3E3')
             .attr('stroke-width', 1)
             .style('opacity', 0.8)
             .attr('fill', function (d, i: number) {

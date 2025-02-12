@@ -14,7 +14,9 @@ const mathFunctions: Record<string, (a: number, b: number) => number> = {
     '+': (a, b) => a + b,
     '-': (a, b) => a - b,
     '*': (a, b) => a * b,
-    '/': (a, b) => a / b
+    '/': (a, b) => a / b,
+    '%': (a, b) => a % b,
+    '>': (a, b) => (a > b ? 1 : 0)
 }
 
 const { getConnectedEdges } = useVueFlow()

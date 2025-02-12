@@ -10,7 +10,7 @@ import Icon from '../Icon.vue'
 
 const props = defineProps(['id', 'data'])
 
-const operators = ['+', '-', '*', '/']
+const operators = ['+', '-', '*', '/', '%', '>']
 
 const { updateNodeData } = useVueFlow()
 </script>
