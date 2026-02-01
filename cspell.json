@@ -19,6 +19,7 @@
         "**/language.ts",
         "**/package.json",
         "**/MOCK_DATA.ts",
-        "eslint.config.js"
+        "eslint.config.js",
+        "pnpm-catalogs.yaml"
     ]
 }

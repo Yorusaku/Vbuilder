@@ -12,18 +12,18 @@
         "@miaoma/blocks": "workspace:*",
         "@miaoma/simulator": "workspace:*",
         "@miaoma/utils": "workspace:*",
-        "pinia": "2.1.7",
-        "vue": "3.4.31",
-        "vue-router": "4.4.0"
+        "pinia": "catalog:vue",
+        "vue": "catalog:vue",
+        "vue-router": "catalog:vue"
     },
     "devDependencies": {
-        "@tsconfig/node20": "20.1.4",
-        "@types/node": "20.14.10",
-        "@vue/tsconfig": "0.5.1",
-        "typescript": "5.5.3",
-        "vite": "5.3.3",
-        "@vitejs/plugin-vue": "5.0.4",
-        "vite-plugin-vue-devtools": "7.3.6",
-        "vue-tsc": "2.0.26"
+        "@tsconfig/node20": "catalog:tools",
+        "@types/node": "catalog:tools",
+        "@vue/tsconfig": "catalog:tools",
+        "typescript": "catalog:build",
+        "vite": "catalog:build",
+        "@vitejs/plugin-vue": "catalog:build",
+        "vite-plugin-vue-devtools": "catalog:build",
+        "vue-tsc": "catalog:build"
     }
 }

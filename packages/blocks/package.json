@@ -14,26 +14,26 @@
     "build": "vite build"
   },
   "peerDependencies": {
-    "vue": "3.4.31"
+    "vue": "catalog:vue"
   },
   "sideEffects":false,
   "dependencies": {
-    "@icon-park/vue-next": "1.4.2",
-    "@tiptap/core": "2.5.1",
-    "@tiptap/pm": "2.5.1",
-    "@tiptap/starter-kit": "2.5.1",
-    "@tiptap/vue-3": "2.5.1",
-    "echarts": "5.5.1",
-    "nanoid": "5.0.7",
-    "vue-draggable-plus": "^0.6.1",
-    "vue-echarts": "6.7.3",
-    "zrender": "5.6.0"
+    "@icon-park/vue-next": "catalog:ui",
+    "@tiptap/core": "catalog:tiptap",
+    "@tiptap/pm": "catalog:tiptap",
+    "@tiptap/starter-kit": "catalog:tiptap",
+    "@tiptap/vue-3": "catalog:tiptap",
+    "echarts": "catalog:echarts",
+    "nanoid": "catalog:utils",
+    "vue-draggable-plus": "catalog:utils",
+    "vue-echarts": "catalog:echarts",
+    "zrender": "catalog:echarts"
   },
   "devDependencies": {
-    "@types/sortablejs": "^1.15.9",
-    "@vitejs/plugin-vue": "5.0.5",
-    "typescript": "5.5.3",
-    "vite": "5.3.3",
-    "vue-tsc": "2.0.26"
+    "@types/sortablejs": "catalog:tools",
+    "@vitejs/plugin-vue": "catalog:build",
+    "typescript": "catalog:build",
+    "vite": "catalog:build",
+    "vue-tsc": "catalog:build"
   }
 }
