@@ -162,7 +162,7 @@ const Icon = defineComponent({
 .app-logo {
     width: 32px;
     height: 32px;
-    margin: 10px 8px 10px 8px;
+    margin: 10px 8px;
     border-radius: 8px;
     background-color: #3d6583;
 }

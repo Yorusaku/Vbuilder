@@ -4,10 +4,10 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import type { ChartBlockInfo, ChartType } from '@miaoma/blocks'
 import { useField, useForm } from 'vee-validate'
 import { watch } from 'vue'
 
-import type { ChartBlockInfo, ChartType } from '@/types/block'
 import SegmentedControl from '@/ui/SegmentedControl/SegmentedControl.vue'
 
 // 怎么传入 props，在这里如何定义？

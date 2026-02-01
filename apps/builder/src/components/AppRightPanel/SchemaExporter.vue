@@ -42,23 +42,27 @@ const handleCopyText = () => {
     color: var(--color-text);
     max-height: 100%;
 }
+
 .schema-exporter-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 12px 0 12px;
+    padding: 12px 12px 0;
     gap: 8px;
     padding-bottom: 8px;
     border-bottom: 1px solid var(--color-gray-300);
     color: var(--color-gray-800);
     font-size: var(--font-size-small);
 }
+
 .icon {
     cursor: pointer;
 }
+
 .icon:hover {
     color: var(--color-primary);
 }
+
 .json-pretty {
     color: var(--color-gray-800);
     padding: 12px;
@@ -72,6 +76,7 @@ const handleCopyText = () => {
 .vjs-tree-node {
     border-radius: 6px;
 }
+
 .vjs-tree-node:hover {
     background-color: var(--color-gray-300);
     font-weight: var(--font-weight-bolder);

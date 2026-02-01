@@ -3,11 +3,11 @@
  *   All rights reserved.
  *   让进取的人更具职业价值
  */
+import type { BlockInfo } from '@miaoma/blocks'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 import { blocks as blocksData } from '@/mocks/blocks'
-import type { BlockInfo } from '@/types/block'
 
 export const useAppEditorStore = defineStore('appEditor', () => {
     const currentBlockId = ref<string | null>(null)

@@ -104,8 +104,8 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
     background-color: var(--color-black);
     cursor: pointer;
     box-shadow:
-        rgba(62, 65, 86, 0.25) 0px 0px 1px,
-        rgba(62, 65, 86, 0.1) 0px 4px 8px;
+        rgb(62 65 86 / 25%) 0 0 1px,
+        rgb(62 65 86 / 10%) 0 4px 8px;
     transition: all 0.3s ease;
 
     &:hover {
@@ -143,7 +143,7 @@ const { isOpen: isComponentDrawerOpened, toggle } = useDisclosure(false)
     width: 300px;
     height: 100%;
     padding: 16px 16px 16px 20px;
-    background-color: rgb(250, 250, 251);
-    box-shadow: rgba(128, 128, 128, 0.12) 1px 0px 0px;
+    background-color: rgb(250 250 251);
+    box-shadow: rgb(128 128 128 / 12%) 1px 0 0;
 }
 </style>

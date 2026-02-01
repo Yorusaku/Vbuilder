@@ -4,14 +4,12 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
-import { SmoothDndContainer } from '@/components/SmoothDnd/SmoothDndContainer'
-import { SmoothDndDraggable } from '@/components/SmoothDnd/SmoothDndDraggable'
-import { blocksBaseMetaList, getBlocksDefaultData } from '@/constants/blocksBaseMeta'
+import { blocksBaseMetaList, getBlocksDefaultData, VueDraggableContainer, VueDraggableDraggable } from '@miaoma/blocks'
 </script>
 
 <template>
     <div class="component-sub-drawer">
-        <smooth-dnd-container
+        <vue-draggable-container
             behaviour="copy"
             group-name="blocks"
             orientation="vertical"
@@ -24,15 +22,15 @@ import { blocksBaseMetaList, getBlocksDefaultData } from '@/constants/blocksBase
             tag="div"
             class="blocks-list"
         >
-            <smooth-dnd-draggable v-for="d in blocksBaseMetaList" :key="d.type">
+            <vue-draggable-draggable v-for="d in blocksBaseMetaList" :key="d.type">
                 <div class="blocks-item">
                     <div class="block-icon-wrapper">
                         <component :is="d.icon" />
                     </div>
                     <span class="block-label">{{ d.label }}</span>
                 </div>
-            </smooth-dnd-draggable>
-        </smooth-dnd-container>
+            </vue-draggable-draggable>
+        </vue-draggable-container>
     </div>
 </template>
 
@@ -40,12 +38,14 @@ import { blocksBaseMetaList, getBlocksDefaultData } from '@/constants/blocksBase
 .component-sub-drawer {
     height: 100%;
 }
+
 .blocks-list {
     --grid-item-color: #EF5F4F;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
+
     /* margin: 0 -12px; */
     padding-bottom: 8px;
 }

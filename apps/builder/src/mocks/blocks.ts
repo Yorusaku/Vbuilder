@@ -3,7 +3,7 @@
  *   All rights reserved.
  *   让进取的人更具职业价值
  */
-import type { BlockInfo } from '@/types/block'
+import type { BlockInfo } from '@miaoma/blocks'
 
 export const blocks: BlockInfo[] = [
     {

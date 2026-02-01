@@ -4,15 +4,18 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import { LaptopPreviewer as AppLaptopPreviewer } from '@miaoma/simulator'
 import { ref } from 'vue'
 
-import AppLaptopPreviewer from '../AppPreviewer/LaptopPreviewer.vue'
+import { useAppEditorStore } from '../../stores/appEditor'
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
 import type { PreviewType } from './type'
+
 const props = defineProps<{
     previewMode?: PreviewType
 }>()
 
+const appEditorStore = useAppEditorStore()
 const runner = ref<HTMLElement | null>(null)
 
 const emit = defineEmits<{
@@ -36,7 +39,9 @@ function toggle() {
 </script>
 
 <template>
-    <div class="layout-runner" ref="runner" style="--container-bg-color: #3d6583">
+    <div class="layout-runner" ref="runner" style="
+
+--container-bg-color: #3d6583">
         <div class="layout-runner-navigator">
             <div></div>
             <div class="address-wrapper">https://miaomaedu.com/path/to/yoursite</div>
@@ -47,7 +52,7 @@ function toggle() {
                 @full-screen="toggle"
             />
         </div>
-        <AppLaptopPreviewer />
+        <AppLaptopPreviewer :app-editor-store="appEditorStore" />
     </div>
 </template>
 

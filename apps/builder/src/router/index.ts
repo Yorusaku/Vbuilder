@@ -5,12 +5,6 @@
  */
 import { createRouter, createWebHistory } from 'vue-router'
 
-// import ActionDetailView from '../views/ActionDetailView.vue'
-// import ActionsView from '../views/ActionsView.vue'
-// import DataSourceDetailView from '../views/DataSourceDetailView.vue'
-// import DataSourceView from '../views/DataSourceView.vue'
-// import PageLayoutView from '../views/PageLayoutView.vue'
-// import RunnerView from '../views/RunnerView.vue'
 import AppView from '../views/AppView.vue'
 
 const router = createRouter({
@@ -66,27 +60,10 @@ const router = createRouter({
             ]
         },
         {
-            path: '/runner',
-            name: 'runner',
-            component: () => import('../views/RunnerView.vue')
-            // component: RunnerView
-        },
-        {
             path: '/',
             redirect: '/app/layout'
         }
     ]
 })
-
-// export const innerRouter = createRouter({
-//   history: createMemoryHistory(import.meta.env.BASE_URL),
-//   routes: [
-//     {
-//       path: '/',
-//       name: 'home',
-//       component: HomeView
-//     }
-//   ]
-// })
 
 export default router

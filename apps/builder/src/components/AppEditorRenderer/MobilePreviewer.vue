@@ -4,9 +4,10 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import { MobilePreviewer as AppMobilePreviewer } from '@miaoma/simulator'
 import { ref } from 'vue'
 
-import AppMobilePreviewer from '../AppPreviewer/MobilePreviewer.vue'
+import { useAppEditorStore } from '../../stores/appEditor'
 import PreviewModeSwitcher from './PreviewModeSwitcher.vue'
 import StatusBar from './StatusBar.vue'
 import TabBar from './TabBar.vue'
@@ -15,6 +16,7 @@ import type { PreviewType } from './type'
 const props = defineProps<{
     previewMode?: PreviewType
 }>()
+const appEditorStore = useAppEditorStore()
 const runner = ref<HTMLElement | null>(null)
 
 const emit = defineEmits<{
@@ -27,7 +29,9 @@ function greet(mode: PreviewType) {
 </script>
 
 <template>
-    <div class="layout-runner" ref="runner" style="--container-bg-color: #3d6583">
+    <div class="layout-runner" ref="runner" style="
+
+--container-bg-color: #3d6583">
         <div class="layout-runner-navigator">
             <PreviewModeSwitcher :preview-mode="props.previewMode" @preview-mode-change="greet" />
         </div>
@@ -36,7 +40,7 @@ function greet(mode: PreviewType) {
                 <StatusBar />
             </div>
             <div class="simulator-content">
-                <AppMobilePreviewer />
+                <AppMobilePreviewer :app-editor-store="appEditorStore" />
             </div>
             <div class="simulator-home-bar">
                 <TabBar />
@@ -115,6 +119,7 @@ function greet(mode: PreviewType) {
     padding: 0 12px 32px;
     flex: 1;
 }
+
 .simulator-content {
     flex: 1;
     overflow: hidden;

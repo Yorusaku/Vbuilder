@@ -4,10 +4,9 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import type { ImageBlockInfo } from '@miaoma/blocks'
 import { useField, useForm } from 'vee-validate'
 import { watch } from 'vue'
-
-import type { ImageBlockInfo } from '@/types/block'
 
 // 怎么传入 props，在这里如何定义？
 const props = defineProps<{
@@ -45,6 +44,7 @@ watch([values], ([newValues]) => {
     font-size: var(--font-size-large);
     border-radius: 8px;
 }
+
 .content-input {
     width: 100%;
 

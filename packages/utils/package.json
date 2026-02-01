@@ -1,0 +1,20 @@
+{
+    "name": "@miaoma/utils",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "main": "./src/index.ts",
+    "module": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": {
+            "import": "./src/index.ts",
+            "types": "./src/index.ts"
+        }
+    },
+    "devDependencies": {
+        "@types/node": "20.14.10",
+        "typescript": "5.5.3",
+        "vite": "5.3.3"
+    }
+}

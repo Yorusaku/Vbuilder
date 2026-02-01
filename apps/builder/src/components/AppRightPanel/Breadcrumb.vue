@@ -5,8 +5,7 @@
 -->
 <script setup lang="ts">
 import { Right } from '@icon-park/vue-next'
-
-import type { BlockInfo } from '@/types/block'
+import type { BlockInfo } from '@miaoma/blocks'
 
 const { blockInfo } = defineProps<{
     blockInfo: BlockInfo | null

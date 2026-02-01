@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "target": "ES2015",
+        "target": "ES2017",
         "lib": ["DOM", "ESNext"],
         "allowJs": true,
         "module": "ESNext",
@@ -9,11 +9,28 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
         "declaration": false,
+        "outDir": "./build",
         "jsx": "preserve",
         "experimentalDecorators": true,
         "resolveJsonModule": true,
         "moduleResolution": "node"
     },
+    "exclude": [
+        "node_modules",
+        "dist",
+        "lib",
+        "build",
+        "**/dist/**",
+        "**/lib/**",
+        "**/build/**",
+        "**/*.config.js",
+        "**/*.config.mjs",
+        "**/*.config.cjs",
+        "**/*.jsx",
+        "**/*.json",
+        "packages/eslint/",
+        "apps/builder/src/components/DataSourceContent/react_app/"
+    ],
     "$schema": "https://json.schemastore.org/tsconfig",
     "display": "Base"
 }

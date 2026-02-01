@@ -1,15 +1,39 @@
 {
-    "name": "@miaoma/blocks",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "Heyi",
-    "dependencies": {
-        "vue-demi": "0.14.7"
-    },
-    "license": "MIT"
+  "name": "@miaoma/blocks",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "peerDependencies": {
+    "vue": "3.4.31"
+  },
+  "sideEffects":false,
+  "dependencies": {
+    "@icon-park/vue-next": "1.4.2",
+    "@tiptap/core": "2.5.1",
+    "@tiptap/pm": "2.5.1",
+    "@tiptap/starter-kit": "2.5.1",
+    "@tiptap/vue-3": "2.5.1",
+    "echarts": "5.5.1",
+    "nanoid": "5.0.7",
+    "vue-draggable-plus": "^0.6.1",
+    "vue-echarts": "6.7.3",
+    "zrender": "5.6.0"
+  },
+  "devDependencies": {
+    "@types/sortablejs": "^1.15.9",
+    "@vitejs/plugin-vue": "5.0.5",
+    "typescript": "5.5.3",
+    "vite": "5.3.3",
+    "vue-tsc": "2.0.26"
+  }
 }

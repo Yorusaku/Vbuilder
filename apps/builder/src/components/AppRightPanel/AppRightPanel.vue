@@ -6,10 +6,10 @@
 <script setup lang="ts">
 import 'vue-json-pretty/lib/styles.css'
 
+import type { BlockInfo } from '@miaoma/blocks'
 import { computed } from 'vue'
 
 import { useAppEditorStore } from '@/stores/appEditor'
-import type { BlockInfo } from '@/types/block'
 
 import Breadcrumb from './Breadcrumb.vue'
 import ChartSetting from './ChartSetting.vue'

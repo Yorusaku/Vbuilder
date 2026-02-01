@@ -1,0 +1,29 @@
+{
+    "name": "runner-web",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "@miaoma/blocks": "workspace:*",
+        "@miaoma/simulator": "workspace:*",
+        "@miaoma/utils": "workspace:*",
+        "pinia": "2.1.7",
+        "vue": "3.4.31",
+        "vue-router": "4.4.0"
+    },
+    "devDependencies": {
+        "@tsconfig/node20": "20.1.4",
+        "@types/node": "20.14.10",
+        "@vue/tsconfig": "0.5.1",
+        "typescript": "5.5.3",
+        "vite": "5.3.3",
+        "@vitejs/plugin-vue": "5.0.4",
+        "vite-plugin-vue-devtools": "7.3.6",
+        "vue-tsc": "2.0.26"
+    }
+}

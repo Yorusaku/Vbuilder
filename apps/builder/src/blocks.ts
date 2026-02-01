@@ -3,17 +3,17 @@
  *   All rights reserved.
  *   让进取的人更具职业价值
  */
+import {
+    type BlockType, // 假设你也导出了 BlockType
+    ButtonBlock,
+    ChartBlock,
+    FormBlock,
+    HeroTitleBlock,
+    ImageBlock,
+    NotesBlock,
+    QuoteBlock,
+    ViewBlock} from '@miaoma/blocks'
 import type { App } from 'vue'
-
-import ChartBlock from '@/blocks/basic/ChartBlock.vue'
-import HeroTitleBlock from '@/blocks/basic/HeroTitleBlock.vue'
-import ImageBlock from '@/blocks/basic/ImageBlock.vue'
-import QuoteBlock from '@/blocks/basic/QuoteBlock.vue'
-import ViewBlock from '@/blocks/basic/ViewBlock.vue'
-import ButtonBlock from '@/blocks/external/ButtonBlock.vue'
-import FormBlock from '@/blocks/external/FormBlock.vue'
-import NotesBlock from '@/blocks/external/NotesBlock.vue'
-import type { BlockType } from '@/types/block'
 
 const baseBlocks = [
     {

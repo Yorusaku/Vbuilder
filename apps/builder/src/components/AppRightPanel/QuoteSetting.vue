@@ -4,10 +4,10 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import type { QuoteBlockInfo, QuoteBlockStatusType } from '@miaoma/blocks'
 import { useField, useForm } from 'vee-validate'
 import { watch } from 'vue'
 
-import { type QuoteBlockInfo, type QuoteBlockStatusType } from '@/types/block'
 import SegmentedControl from '@/ui/SegmentedControl/SegmentedControl.vue'
 
 const quoteBlockStatusOptions = [
@@ -70,6 +70,7 @@ watch([values], ([newValues]) => {
 
     /* background-color: ; */
 }
+
 .content-input {
     width: 100%;
 

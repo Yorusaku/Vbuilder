@@ -4,21 +4,17 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
-import { applyPureReactInVue } from 'veaury'
-
-// @ts-ignore
-import ReactDataSource from './react_app/ReactDataSource'
-const RDataSource = applyPureReactInVue(ReactDataSource)
+import VTableGrid from './VTableGrid.vue'
 
 defineProps<{
     id: string
 }>()
-
 </script>
+
 <template>
     <div class="data-source-content-wrapper">
         <div class="data-source-render">
-            <r-dataSource :id="id" />
+            <VTableGrid :id="id" />
         </div>
     </div>
 </template>
@@ -31,8 +27,11 @@ defineProps<{
 
 .data-source-render {
     height: 100%;
+
     /* height: calc(100% - 40px); */
+
     /* margin: 20px; */
+
     /* padding: 12px; */
     background-color: var(--color-white);
     border-radius: 8px;

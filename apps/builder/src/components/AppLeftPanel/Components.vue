@@ -4,9 +4,9 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import { blocksBaseMeta } from '@miaoma/blocks'
 import { storeToRefs } from 'pinia'
 
-import { blocksBaseMeta } from '@/constants/blocksBaseMeta'
 import { useAppEditorStore } from '@/stores/appEditor'
 
 const appEditorStore = useAppEditorStore()

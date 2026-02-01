@@ -4,10 +4,10 @@
     让进取的人更具职业价值
 -->
 <script setup lang="ts">
+import { type HeroTitleBlockAlign, type HeroTitleBlockInfo } from '@miaoma/blocks'
 import { useField, useFieldArray, useForm } from 'vee-validate'
 import { watch } from 'vue'
 
-import { type HeroTitleBlockAlign, type HeroTitleBlockInfo } from '@/types/block'
 import SegmentedControl from '@/ui/SegmentedControl/SegmentedControl.vue'
 
 const alignOptions = [
@@ -76,6 +76,7 @@ watch([values], ([newValues]) => {
 
     /* background-color: ; */
 }
+
 .content-input {
     width: 100%;
 

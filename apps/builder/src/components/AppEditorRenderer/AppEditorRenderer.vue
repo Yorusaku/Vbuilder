@@ -33,7 +33,6 @@ const handleModeChange = (mode: PreviewType) => {
 
 <style scoped>
 .layout-content {
-    position: relative;
     display: flex;
     flex-direction: column;
     position: relative;

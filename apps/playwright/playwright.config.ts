@@ -3,6 +3,7 @@
  *   All rights reserved.
  *   让进取的人更具职业价值
  */
+/* eslint-disable no-undef */
 import path from 'node:path'
 
 import { defineConfig, devices } from '@playwright/test'
