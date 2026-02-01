@@ -70,5 +70,6 @@ webc
 wmlb
 wonu
 xiino
+yourserver
 zeto
 zrender

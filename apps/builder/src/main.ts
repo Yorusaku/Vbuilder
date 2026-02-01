@@ -1,8 +1,3 @@
-/*
- *   Copyright (c) 2024 妙码学院 @Heyi
- *   All rights reserved.
- *   让进取的人更具职业价值
- */
 import './assets/main.css'
 
 import { browserTracingIntegration, init, replayIntegration } from '@sentry/vue'

@@ -10,16 +10,42 @@
         }
     ],
     "ignorePaths": [
+        "**/.git/**",
+        "**/.vscode/**",
+        "**/.husky/**",
+        "**/.idea/**",
         "**/node_modules/**",
         "**/dist/**",
         "**/lib/**",
         "**/docs/**",
+        "**/public/**",
+        "**/assets/**",
+
         "**/stats.html",
+        "**/pnpm-lock.yaml",
+        "**/pnpm-workspace.yaml",
+        "**/pnpm-catalogs.yaml",
+        "**/turbo.json",
+        "**/package.json",
+        "**/tsconfig*.json",
+        "**/cspell.json",
+
+        "**/*.config.js",
+        "**/*.config.ts",
+        "**/*.config.mjs",
+        "**/.prettierrc",
+        "**/.editorconfig",
+        "**/.gitignore",
+
         "**/language/**",
         "**/language.ts",
-        "**/package.json",
         "**/MOCK_DATA.ts",
-        "eslint.config.js",
-        "pnpm-catalogs.yaml"
+        "**/*.svg",
+        "**/*.png",
+        "**/*.jpg",
+        "**/*.webp",
+        "**/*.min.js",
+        "**/*.min.css",
+        "**/*.map"
     ]
 }
